@@ -1,10 +1,6 @@
 package de.oesing.all;
 
-import java.util.Arrays;
-
 public class OesingLibString {
-
-	private static boolean debug = false;
 
 	/**
 	 * @param number The number that gets turned into roman digits.
@@ -86,11 +82,6 @@ public class OesingLibString {
 				} else {
 					v2[j + 1] = Math.min(Math.min(v1[j + 1] + deletion, v2[j] + insertion), v1[j] + substitution);
 				}
-			}
-			if (debug) {
-				System.out.println(Arrays.toString(v1));
-				System.out.println(Arrays.toString(v2));
-				System.out.println();
 			}
 			final int[] temp = v1;
 			v1 = v2;
